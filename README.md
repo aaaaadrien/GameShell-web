@@ -1,53 +1,49 @@
 # GameShell-web
-Web version of phyver's GameShell
 
-Original Project : https://github.com/phyver/GameShell
+## Intro
 
+Browser-playable version of the [GameShell](https://github.com/phyver/GameShell) game,
+a game for learning Unix shell commands while having fun.
 
-## Intro 
+- 44 missions (the `xeyes` mission was intentionally excluded).
+- Interface: HTML + CSS + pure JavaScript (no dependencies).
+- Language: **English** by default, **French** automatically if the browser
+  language is French (`EN`/`FR` button in the top right corner to switch).
+- Progress: saved in a browser **cookie** (1 year).
 
-Version jouable dans le navigateur du jeu [GameShell](https://github.com/phyver/GameShell),
-un jeu pour apprendre les commandes du shell Unix en s'amusant.
+## Running the game
 
-- 44 missions (la mission `xeyes` a été volontairement exclue).
-- Interface : HTML + CSS + JavaScript pur (aucune dépendance).
-- Langue : **anglais** par défaut, **français** automatique si la langue du
-  navigateur est française (bouton `EN`/`FR` en haut à droite pour changer).
-- Progression : sauvegardée dans un **cookie** du navigateur (1 an).
-
-## Lancer le jeu
-
-Le plus simple est de servir le dossier avec un petit serveur HTTP,
-mais hébergeable aussi sur un apache ou nginx :
+The simplest way is to serve the folder with a small HTTP server,
+but it can also be hosted on apache or nginx:
 
 ```sh
 cd web
 python3 -m http.server 8000
-# puis ouvrir http://ip_du_serveur:8000/
+# then open http://server_ip:8000/
 ```
 
-Les commandes `gsh goal`, `gsh check`, `gsh reset`, `gsh help`, ... sont disponibles.
+The `gsh goal`, `gsh check`, `gsh reset`, `gsh help`, ... commands are available.
 
-## Commandes du jeu
+## Game commands
 
-| Commande      | Description                                    |
+| Command       | Description                                    |
 |---------------|------------------------------------------------|
-| `gsh goal`    | afficher l'objectif de la mission en cours     |
-| `gsh check`   | vérifier que l'objectif est atteint            |
-| `gsh reset`   | réinitialiser la mission en cours              |
-| `gsh help`    | aide courte                                    |
-| `gsh skip`    | abandonner la mission et passer à la suivante  |
-| `gsh goto N`  | aller directement à la mission N               |
-| `gsh index`   | liste des missions avec leur statut            |
-| `gsh stat`    | statistiques                                   |
-| `gsh exit`    | quitter (et sauvegarder) — ou `Ctrl-D`         |
+| `gsh goal`    | show the objective of the current mission      |
+| `gsh check`   | check that the objective is met                |
+| `gsh reset`   | reset the current mission                      |
+| `gsh help`    | short help                                     |
+| `gsh skip`    | abandon the mission and move to the next one   |
+| `gsh goto N`  | go directly to mission N                       |
+| `gsh index`   | list of missions with their status             |
+| `gsh stat`    | statistics                                     |
+| `gsh exit`    | quit (and save) — or `Ctrl-D`                  |
 
-Raccourcis clavier : `Tab` (complétion), `↑`/`↓` (historique),
-`Ctrl-L` (effacer l'écran), `Ctrl-C` (interrompre).
+Keyboard shortcuts: `Tab` (completion), `↑`/`↓` (history),
+`Ctrl-L` (clear screen), `Ctrl-C` (interrupt).
 
 ## Tests
 
 ```sh
-node test.js          # tests unitaires (FS, shell, missions)
-node playthrough.js   # résolution automatique des 44 missions
+node test.js          # unit tests (FS, shell, missions)
+node playthrough.js   # automatic resolution of the 44 missions
 ```
