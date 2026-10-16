@@ -41,6 +41,10 @@ Les commandes `gsh goal`, `gsh check`, `gsh reset`, `gsh help`, ... sont disponi
 Raccourcis clavier : `Tab` (complétion), `↑`/`↓` (historique),
 `Ctrl-L` (effacer l'écran), `Ctrl-C` (interrompre).
 
+## Captures d'écran
+
+![GameShell-web (FR)](gameshell-web-fr.png)
+
 ## Tests
 
 ```sh

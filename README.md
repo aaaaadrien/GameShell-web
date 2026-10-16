@@ -41,6 +41,10 @@ The `gsh goal`, `gsh check`, `gsh reset`, `gsh help`, ... commands are available
 Keyboard shortcuts: `Tab` (completion), `↑`/`↓` (history),
 `Ctrl-L` (clear screen), `Ctrl-C` (interrupt).
 
+## Screenshots
+
+![GameShell-web (EN)](gameshell-web-en.png)
+
 ## Tests
 
 ```sh
