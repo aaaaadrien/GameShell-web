@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameShell</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <span id="title">GameShell</span>
+    <span id="mission-indicator"></span>
+    <div id="topbar-buttons">
+      <button id="btn-goal" title="gsh goal">?</button>
+      <button id="btn-help" title="gsh help">!</button>
+      <button id="btn-reset" title="gsh reset">&#8635;</button>
+      <button id="btn-lang" title="language"></button>
+    </div>
+  </header>
+  <main id="terminal">
+    <div id="output"></div>
+    <div id="prompt-line">
+      <span id="prompt"></span>
+      <input id="input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="command">
+    </div>
+  </main>
+  <footer id="statusbar">
+    <span id="status-left"></span>
+    <span id="status-right"></span>
+  </footer>
+</div>
+
+<!-- nano editor overlay -->
+<div id="nano-overlay" class="hidden">
+  <div id="nano-window">
+    <div id="nano-titlebar"></div>
+    <div id="nano-content"></div>
+    <div id="nano-footer"></div>
+  </div>
+</div>
+
+<!-- man / less pager overlay -->
+<div id="pager-overlay" class="hidden">
+  <div id="pager-window">
+    <div id="pager-titlebar"></div>
+    <div id="pager-content"></div>
+    <div id="pager-footer"></div>
+  </div>
+</div>
+
+<script src="js/goals_data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/fs.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/missions.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
